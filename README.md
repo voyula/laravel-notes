@@ -3,6 +3,14 @@
 [![Build Status][ico-travis]][link-travis]
 [![License][ico-license]][link-license]
 
+## ⚡ Installation
+
+Via [Composer](https://getcomposer.org/)
+
+```bash
+$ composer install
+```
+
 ### 📜 Standards
 
 - [Semantic Versioning 2.0.0](https://semver.org/)
