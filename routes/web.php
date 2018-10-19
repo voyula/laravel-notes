@@ -21,4 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/notes/create', 'NoteController@create')->name('notes.create');
 
-Route::post('/notes', 'NoteController@store')->name('notes.store');
+Route::post('/notes/storage', 'NoteController@store')->name('notes.store');
