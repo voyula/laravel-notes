@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/add/note', function() {
-    return view('add.note');
-})->name('addNote');
-Route::post('/add/note', 'HomeController@addNote')->name('addNoteAction');
+
+Route::get('/notes/create', 'NoteController@create')->name('notes.create');
+
+Route::post('/notes', 'NoteController@store')->name('notes.store');

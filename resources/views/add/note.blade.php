@@ -14,11 +14,16 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('addNoteAction') }}" method="post">
+                    <form action="{{ route('notes.store') }}" method="post">
                         @csrf
                         <div class="form-group">
                             <label for="note">Note</label>
-                            <textarea class="form-control" id="note" name="note" rows="3"></textarea>
+                            <textarea class="form-control{{ $errors->has('note') ? ' is-invalid' : '' }}" id="note" name="note" rows="3"></textarea>
+                            @if ($errors->has('note'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('note') }}</strong>
+                                </span>
+                            @endif
                         </div>
                         <button type="submit" class="btn btn-primary mb-2">Kaydet</button>
                     </form>

@@ -27,11 +27,4 @@ class HomeController extends Controller
         $user = Auth::user();
         return view('home')->with('notes', $user->notes()->get());
     }
-
-    public function addNote(Request $request)
-    {
-        $user = Auth::user();
-        $user->notes()->create($request->all());
-        return redirect(route('home'));
-    }
 }
