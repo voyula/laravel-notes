@@ -10,7 +10,10 @@ Notes application based on Laravel.
 Via [Composer](https://getcomposer.org/)
 
 ```bash
+$ git clone https://github.com/voyula/laravel-notes.git
+$ cd laravel-notes
 $ composer install
+$ php artisan migrate --force
 ```
 
 ### 📜 Standards
