@@ -7,7 +7,7 @@ Notes application based on Laravel.
 
 ## ⚡ Installation & Running
 
-Via [Composer](https://getcomposer.org/) & [GIT](https://git-scm.com/)
+Via [GIT](https://git-scm.com/) & [Composer](https://getcomposer.org/)
 
 ```bash
 $ git clone https://github.com/voyula/laravel-notes.git
