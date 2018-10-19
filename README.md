@@ -3,6 +3,8 @@
 [![Build Status][ico-travis]][link-travis]
 [![License][ico-license]][link-license]
 
+Notes application based on Laravel.
+
 ## ⚡ Installation
 
 Via [Composer](https://getcomposer.org/)
