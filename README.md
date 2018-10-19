@@ -17,7 +17,7 @@ $ php artisan migrate --force
 $ php artisan serve
 ```
 
-Your app should now be running on [http://localhost:8080/](http://localhost:8080/)
+Your app should now be running on [http://localhost:8000/](http://localhost:8000/)
 
 ### 📜 Standards
 
