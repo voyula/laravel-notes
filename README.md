@@ -14,7 +14,10 @@ $ git clone https://github.com/voyula/laravel-notes.git
 $ cd laravel-notes
 $ composer install
 $ php artisan migrate --force
+$ php artisan serve
 ```
+
+Your app should now be running on [http://localhost:8080/](http://localhost:8080/)
 
 ### 📜 Standards
 
