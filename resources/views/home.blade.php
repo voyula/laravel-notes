@@ -17,7 +17,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Not</th>
+                                <th scope="col">Note</th>
                             </tr>
                         </thead>
                         <tbody>
