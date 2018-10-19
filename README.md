@@ -1,4 +1,4 @@
-# 📓 laravel-notes
+# 💜 laravel-notes
 
 [![Build Status][ico-travis]][link-travis]
 [![License][ico-license]][link-license]
