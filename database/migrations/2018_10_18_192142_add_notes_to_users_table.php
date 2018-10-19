@@ -15,7 +15,7 @@ class AddNotesToUsersTable extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->unsignedInteger('user_id');
             $table->string('note');
             $table->timestamps();
         });
