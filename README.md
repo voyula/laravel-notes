@@ -5,7 +5,7 @@
 
 Notes application based on Laravel.
 
-## ⚡ Installation
+## ⚡ Installation & Running
 
 Via [Composer](https://getcomposer.org/)
 
