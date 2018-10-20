@@ -13,22 +13,33 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Note</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($notes as $note)
+
+                    @if (count($notes))
+                        <table class="table">
+                            <thead>
                                 <tr>
-                                    <th scope="row">{{ $note->id }}</th>
-                                    <td>{{ $note->note }}</td>
+                                    <th scope="col">Note</th>
+                                    <th scope="col">Action</th>
                                 </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach ($notes as $note)
+                                    <tr>
+                                        <td>{{ $note->note }}</td>
+                                        <td>
+                                            <a href="{{ route('notes.edit', $note->id) }}">Edit</a> |
+                                            <a href="{{ route('notes.delete', $note->id) }}">Delete</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        {{ $notes->links() }}
+                    @else
+                        <div class="alert alert-warning" role="alert">
+                            Not have note...
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

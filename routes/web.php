@@ -19,6 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/notes/create', 'NoteController@create')->name('notes.create');
-
-Route::post('/notes/store', 'NoteController@store')->name('notes.store');
+Route::prefix('/notes')->group(function () {
+    Route::get('/create', 'NoteController@create')->name('notes.create');
+    Route::post('/store', 'NoteController@store')->name('notes.store');
+    Route::get('/edit/{id}', 'NoteController@edit')->name('notes.edit');
+    Route::post('/update/{id}', 'NoteController@update')->name('notes.update');
+    Route::get('/delete/{id}', 'NoteController@delete')->name('notes.delete');
+});
