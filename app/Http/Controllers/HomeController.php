@@ -24,7 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         return view('home')->with('notes',
-            auth()->user()->notes()->orderby('id', 'desc')->paginate(5)
+            auth()->user()->notes()->orderBy('id', 'desc')->paginate(5)
         );
     }
 }
