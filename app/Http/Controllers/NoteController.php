@@ -51,6 +51,6 @@ class NoteController extends Controller
     {
         auth()->user()->notes()->find($id)->delete();
 
-        return redirect()->with('status', 'Deleted successfully...');
+        return redirect(route('home'))->with('status', 'Deleted successfully...');
     }
 }
