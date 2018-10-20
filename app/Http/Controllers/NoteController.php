@@ -29,9 +29,9 @@ class NoteController extends Controller
 
     public function edit($id)
     {
-        $note = auth()->user()->notes()->findOrFail($id)->first();
-
-        return view('note.edit')->with('note', $note);
+        return view('note.edit')->with('note',
+            auth()->user()->notes()->findOrFail($id)
+        );
     }
 
     public function update(Request $request, $id)
