@@ -29,7 +29,7 @@ class NoteController extends Controller
 
     public function edit($id)
     {
-        $note = auth()->user()->notes()->find($id)->first();
+        $note = auth()->user()->notes()->findOrFail($id)->first();
 
         return view('note.edit')->with('note', $note);
     }
@@ -40,7 +40,7 @@ class NoteController extends Controller
             'note' => ['required', 'min:3', 'max:255'],
         ]);
 
-        $note = auth()->user()->notes()->find($id);
+        $note = auth()->user()->notes()->findOrFail($id);
         $note->note = $request->note;
         $note->save();
 
@@ -49,7 +49,7 @@ class NoteController extends Controller
 
     public function delete($id)
     {
-        auth()->user()->notes()->find($id)->delete();
+        auth()->user()->notes()->findOrFail($id)->delete();
 
         return redirect(route('home'))->with('status', 'Deleted successfully...');
     }
