@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    naber xd
+                    Hoşgeldiniz...
                 </div>
             </div>
         </div>
