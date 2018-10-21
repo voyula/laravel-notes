@@ -21,16 +21,16 @@ Route::get('/home', 'User\HomeController@index')->name('home');
 
 Route::prefix('/notes')->group(function () {
     Route::get('/create', 'User\NoteController@create')->name('notes.create');
-    Route::post('/store', 'User\NoteController@store')->name('notes.store');
+    Route::post('/create', 'User\NoteController@store');
     Route::get('/edit/{id}', 'User\NoteController@edit')->name('notes.edit');
-    Route::post('/update/{id}', 'User\NoteController@update')->name('notes.update');
+    Route::post('/edit/{id}', 'User\NoteController@update');
     Route::get('/delete/{id}', 'User\NoteController@delete')->name('notes.delete');
 });
 
 Route::prefix('/admin')->group(function () {
     // Authentication Routes...
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
-    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::post('/login', 'Auth\AdminLoginController@login');
     Route::post('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
 
     Route::get('/home', 'Admin\AdminController@index')->name('admin.home');

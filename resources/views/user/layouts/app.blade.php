@@ -59,7 +59,7 @@
                                         {{ __('Notes') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('notes.create') }}">
-                                        {{ __('Add Note') }}
+                                        {{ __('Create Note') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

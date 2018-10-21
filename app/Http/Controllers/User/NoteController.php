@@ -14,7 +14,7 @@ class NoteController extends Controller
 
     public function create()
     {
-        return view('user.note.add');
+        return view('user.note.create');
     }
 
     public function store(Request $request)

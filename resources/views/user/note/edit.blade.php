@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('notes.update', $note->id) }}" method="post">
+                    <form action="{{ route('notes.edit', $note->id) }}" method="post">
                         @csrf
                         <div class="form-group">
                             <label for="note">Note</label>

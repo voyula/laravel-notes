@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Add Note</div>
+                <div class="card-header">Create Note</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('notes.store') }}" method="post">
+                    <form action="{{ route('notes.create') }}" method="post">
                         @csrf
                         <div class="form-group">
                             <label for="note">Note</label>
@@ -25,7 +25,7 @@
                                 </span>
                             @endif
                         </div>
-                        <button type="submit" class="btn btn-primary mb-2">Save</button>
+                        <button type="submit" class="btn btn-primary mb-2">Create</button>
                     </form>
                 </div>
             </div>
