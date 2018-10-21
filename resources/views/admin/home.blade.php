@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Hoşgeldiniz...
+                    Welcome...
                 </div>
             </div>
         </div>

@@ -17,16 +17,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'User\HomeController@index')->name('home');
 
 Route::prefix('/notes')->group(function () {
-    Route::get('/create', 'NoteController@create')->name('notes.create');
-    Route::post('/store', 'NoteController@store')->name('notes.store');
-    Route::get('/edit/{id}', 'NoteController@edit')->name('notes.edit');
-    Route::post('/update/{id}', 'NoteController@update')->name('notes.update');
-    Route::get('/delete/{id}', 'NoteController@delete')->name('notes.delete');
+    Route::get('/create', 'User\NoteController@create')->name('notes.create');
+    Route::post('/store', 'User\NoteController@store')->name('notes.store');
+    Route::get('/edit/{id}', 'User\NoteController@edit')->name('notes.edit');
+    Route::post('/update/{id}', 'User\NoteController@update')->name('notes.update');
+    Route::get('/delete/{id}', 'User\NoteController@delete')->name('notes.delete');
 });
 
 Route::prefix('/admin')->group(function () {
-
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/home', 'Admin\AdminController@index')->name('admin.home');
 });
