@@ -26,3 +26,7 @@ Route::prefix('/notes')->group(function () {
     Route::post('/update/{id}', 'NoteController@update')->name('notes.update');
     Route::get('/delete/{id}', 'NoteController@delete')->name('notes.delete');
 });
+
+Route::prefix('/admin')->group(function () {
+
+});
