@@ -13,7 +13,7 @@ class NoteController extends Controller
 
     public function create()
     {
-        return view('note.add');
+        return view('user.note.add');
     }
 
     public function store(Request $request)
@@ -29,7 +29,7 @@ class NoteController extends Controller
 
     public function edit($id)
     {
-        return view('note.edit')->with('note',
+        return view('user.note.edit')->with('note',
             auth()->user()->notes()->findOrFail($id)
         );
     }
