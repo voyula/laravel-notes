@@ -13,7 +13,7 @@ Via [GIT](https://git-scm.com/) & [Composer](https://getcomposer.org/)
 $ git clone https://github.com/voyula/laravel-notes.git
 $ cd laravel-notes
 $ composer install
-$ mv .env.example .env
+$ cp .env.example .env
 $ vi .env
 $ php artisan key:generate
 $ php artisan migrate --force
